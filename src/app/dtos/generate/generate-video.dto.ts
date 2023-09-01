@@ -1,9 +1,5 @@
 import * as Joi from 'joi';
 
-export interface IGenreateVideoDTO {
-  images: {url: string, delay: number}
-}
-
 export const GenreateVideoSchemaFactory = ({}) => {
   const schema: Joi.SchemaMap = {
     images: Joi.array().items(Joi.object({
