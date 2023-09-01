@@ -3,7 +3,7 @@ import { GenerateService } from '../services';
 import { JoiValidationPipe } from '../pipes';
 import { GenreateVideoSchema, IGenreateVideoDTO } from '../dtos';
 
-@Controller()
+@Controller('generate')
 export class GenerateController {
   constructor(private readonly generateService: GenerateService) {}
 
@@ -14,6 +14,6 @@ export class GenerateController {
     }),
   )
   getVideo(@Body() data: IGenreateVideoDTO): string {
-    return this.generateService.getVideo();
+    return this.generateService.getVideo({images: data.images});
   }
 }
