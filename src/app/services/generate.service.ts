@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { IGenreateVideoDTO } from '../dtos';
+import { IGenreateVideoDTO } from '../interfaces';
 
 @Injectable()
 export class GenerateService {

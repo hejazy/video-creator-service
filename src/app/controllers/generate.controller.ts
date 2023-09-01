@@ -1,7 +1,8 @@
-import { Body, Controller, Get, Post, UsePipes } from '@nestjs/common';
+import { Body, Controller, Post, UsePipes } from '@nestjs/common';
 import { GenerateService } from '../services';
 import { JoiValidationPipe } from '../pipes';
-import { GenreateVideoSchema, IGenreateVideoDTO } from '../dtos';
+import { GenreateVideoSchema } from '../dtos';
+import { IGenreateVideoDTO } from '../interfaces';
 
 @Controller('generate')
 export class GenerateController {
