@@ -1,3 +1,5 @@
+import { IImage } from "./image.interface";
+
 export interface IGenreateVideoDTO {
-    images: {url: string, delay: number}
+    images: IImage[]
   }
