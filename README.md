@@ -2,8 +2,6 @@
 
 💫 Welcome! 🎉
 
-This backend exercise involves building a Node.js/Express.js/Nest.js app that will serve a REST API.
-
 ## Running service
 - **First:** Install nodeJS.
 - **Second:** Clone the repo and open the directory
@@ -25,4 +23,4 @@ $ npm run start
 **Please reach me if you have any qustion.**
 
 
-Thank you and good luck! 🙏
+Thank you! 🙏
