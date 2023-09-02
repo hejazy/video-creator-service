@@ -20,7 +20,6 @@ export const generateFreames = async (images: IImage[], id: string) => {
     var xOffset = newWidth < c.width ? ((c.width - newWidth) / 2) : 0;
     var yOffset = newHeight < c.height ? ((c.height - newHeight) / 2) : 0;
     ctx.drawImage(currentImage, xOffset, yOffset, newWidth, newHeight);
-    console.log(image.delay)
     const framesCount = (image.delay / 1000) * FRAMES_PER_SEC
     const output = c.toBuffer('image/png');
     for (let i = 0; i < framesCount; i++) {
