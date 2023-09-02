@@ -1,4 +1,4 @@
-import { Body, Controller, Post, UsePipes } from '@nestjs/common';
+import { Body, Controller, Header, Post, StreamableFile, UsePipes } from '@nestjs/common';
 import { GenerateService } from '../services';
 import { JoiValidationPipe } from '../pipes';
 import { GenreateVideoSchema } from '../dtos';
@@ -14,7 +14,8 @@ export class GenerateController {
       query: GenreateVideoSchema,
     }),
   )
-  getVideo(@Body() data: IGenreateVideoDTO): string {
+  @Header('content-type', 'video/mp4')
+  getVideo(@Body() data: IGenreateVideoDTO): Promise<StreamableFile> {
     return this.generateService.getVideo({images: data.images});
   }
 }
